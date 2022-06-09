@@ -89,7 +89,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 5;
-  display: none;
+  /* display: none; */
 }
 .inner_wrap .box {
   background: #fff;
@@ -163,8 +163,32 @@ body {
     justify-content: space-between;
     width: 70vw;
   }
-  .icon_wrap img {
+  .icon_wrap img,
+  .pumping {
     width: 60px;
+    height: 60px !important;
+  }
+  .inner_wrap {
+    position: absolute;
+    top: 30vw;
+    left: 0;
+    background: no-repeat center/120% url(../img/bg_2.jpg);
+    width: 100vw;
+    height: 35vh;
+  }
+  .inner_wrap .box {
+    width: 55vw;
+    height: 45vw;
+    margin-top: 35px;
+  }
+  .inner_wrap .box_con p {
+    font-size: 14px;
+  }
+  .inner_wrap .box_con .inner_box {
+    width: 24vw;
+  }
+  .inner_wrap .box_con .img_box {
+    height: 24vw;
   }
 }
 
