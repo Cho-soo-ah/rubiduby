@@ -85,7 +85,7 @@ body {
 .inner_wrap {
   background: no-repeat center/100% url("../img/bg_2.jpg");
   height: 100vh;
-  width: 65vw;
+  width: 48vw;
   justify-content: center;
   align-items: center;
   z-index: 5;
@@ -96,7 +96,7 @@ body {
   width: 30vw;
   height: 25vw;
   overflow-y: scroll;
-  margin-top: 75px;
+  margin-top: 65px;
 }
 
 .box::-webkit-scrollbar {
@@ -172,7 +172,7 @@ body {
     position: absolute;
     top: 30vw;
     left: 0;
-    background: no-repeat center/120% url(../img/bg_2.jpg);
+    background: no-repeat center/90% url(../img/bg_2.jpg);
     width: 100vw;
     height: 35vh;
   }
