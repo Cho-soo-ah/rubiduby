@@ -89,7 +89,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 5;
-  /* display: none; */
+  display: none;
 }
 .inner_wrap .box {
   background: #fff;
