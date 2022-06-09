@@ -8,31 +8,51 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <h2>RUBIDUBY</h2>
+    <h1 >RUBIDUBY</h1>
     <div id="cursor">
       <div class="cursor__circle"></div>
     </div>
     <img src="img/bg_1.jpg" class="bg" alt="" />
-
     <div class="icon_wrap">
       <div class="con left">
         <img src="icon/human.png" alt="" class="about" cursor-class="1" />
-
         <img src="icon/code.png" alt="" class="code" cursor-class="2" />
+        
+        <div class="pumping btn" ><img src="icon/star.png" alt=""/></div>
       </div>
       <div class="con right">
-        <img src="icon/art.png" alt="" class="art" cursor-class="3" />
-        <img src="icon/picture.png" alt="" class="pic" cursor-class="4" />
-        <img src="icon/contact.png" alt="" class="about" cursor-class="5" />
+        <img src="icon/paint.png" alt="" class="art" cursor-class="3" />
+        <img src="icon/camera.png" alt="" class="pic" cursor-class="4" />
+        <img src="icon/bee.png" alt="" class="pumping bee_icon" />
       </div>
     </div>
 
     <div class="inner_wrap">
       <div class="box">
-        <div class="box_con 1">1</div>
+        <div class="box_con 1">
+          <p class="kr">
+            안녕하세요. 성장하는 프론트엔드 개발자 조수아입니다</br>
+            빠르게 배우고 몰두하여 개발하는 것이 저의 장점입니다.
+            </br></br>
+            현재 프론트엔드 개발자로 근무 중입니다. 입사 후 유심 관리 시스템 리뉴얼 프로젝트의 전반적인 프론트엔드 개발을 담당하였고, 지금은 두번째 프로젝트로 지식플랫폼 프로젝트의 UI/UX 설계를 맡아 진행하고 있습니다.</br></br>
+            리뉴얼 프로젝트를 진행하며 백엔드 개발자와 협업하는 과정에서 서버에 관해 많이 배울 수 있었습니다. 필요한 명세를 Notion에 API 문서로 작성하여 소통하였고 GIT으로 버전을 관리하였습니다.
+          </p>
+          <div class="divider"></div></br>
+          <p><img src="icon/mail.png" alt="">&#8194;flkur106@naver.com</p>
+          <p><img src="icon/git.png" alt=""><a href="https://github.com/Cho-soo-ah">&#8194;https://github.com/Cho-soo-ah</a></p>
+          <div class="divider"></div>
+          <p>
+          <span><img src="icon/check.png" alt="">&#8194;Certificate</span> &#8194;<span class="kr">정보처리기사(필기), 웹디자인기능사</span><br/>
+          <span><img src="icon/check.png" alt="">&#8194;Design</span> &#8194;Photoshop, Illustrator, Pigma<br/>
+          <span><img src="icon/check.png" alt="">&#8194;Front-end</span> &#8194;Javascript, React, Next.js, Redux, Recoil<br/>
+          <span><img src="icon/check.png" alt="">&#8194;Back-end</span> &#8194;MongoDB, GraphQL, express, node.js
+        </p>
+        </div>
         <div class="box_con 2">
           <div class="inner_box">
             <a
-              href="https://cho-soo-ah.github.io/digging-shop/"
+              href="https://github.com/Cho-soo-ah/digging-shop"
               target="_blank"
             >
               <div class="img_box">
@@ -55,7 +75,7 @@
             <p>Usim System</p>
           </div>
           <div class="inner_box">
-            <a href="https://cho-soo-ah.github.io/TTDD" target="_blank">
+            <a href="https://github.com/Cho-soo-ah/TTDD" target="_blank">
               <div class="img_box">
                 <img src="img/box2_3.png" alt="" />
               </div>
@@ -88,8 +108,28 @@
             <p>SVG Animation</p>
           </div>
         </div>
-        <div class="box_con 3">3</div>
+        <div class="box_con 3">
+          <p class="kr">
+            학부생 때의 작업입니다.
+            <div class="img_box">
+              <img src="img/box3_1.jpg" alt="">
+            </div>
+            <div class="img_box">
+              <img src="img/box3_2.jpg" alt="">
+            </div>
+            <div class="img_box">
+              <img src="img/box3_3.jpg" alt="">
+            </div>
+            <div class="img_box">
+              <img src="img/box3_4.jpg" alt="">
+            </div>
+          </p>
+        </div>
         <div class="box_con 4">
+          <p class="kr">
+            저와 함께 지내는 거북이들입니다.<br/>
+            <img src="icon/heart.png" alt="" /> 쿠쿠: 4살, 아무 : 1살, 육만 : 2살
+          </p>
           <div class="inner_box">
             <div class="img_box">
               <img src="img/box4_1.png" alt="" />
@@ -121,10 +161,14 @@
             </div>
           </div>
         </div>
-        <div class="box_con 5">5</div>
       </div>
     </div>
-
+    <div class="bee">
+      <canvas class="scene"></canvas>
+    </div>
+    <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/heart.js"></script>
+    <script src="js/bee.js"></script>
   </body>
 </html>

@@ -1,57 +1,3 @@
-// let wrap;
-// // let cursor;
-// let about;
-// let code;
-// let art;
-// let pic;
-// let contact;
-
-// let x = 0;
-// let y = 0;
-// let mx = 0;
-// let my = 0;
-// let speed = 0.009;
-
-// window.onload = function () {
-//   wrap = document.querySelector(".icon_wrap");
-//   cursor = document.querySelector(".cursor");
-//   about = document.querySelector(".about");
-//   code = document.querySelector(".code");
-//   art = document.querySelector(".art");
-//   pic = document.querySelector(".pic");
-//   contact = document.querySelector(".contact");
-
-//   window.addEventListener("mousemove", mouseFunc, false);
-//   window.addEventListener("click", mouseClick, false);
-//   about.addEventListener("click", mouseOver, false);
-
-//   function mouseFunc(e) {
-//     x = e.clientX - window.innerWidth / 2;
-//     y = e.clientY - window.innerHeight / 2;
-//   }
-//   function mouseClick() {}
-//   function mouseOver(e) {
-//     console.log(e);
-//   }
-//   loop();
-// };
-
-// function loop() {
-//   mx += (x - mx) * speed;
-//   mx += (x - mx) * speed;
-
-//   // wrap.style.transform =
-//   //   "translate3d(" +
-//   //   -(mx / 15) +
-//   //   "px," +
-//   //   -(my / 15) +
-//   //   "px,0) rotate3d(0,1,0," +
-//   //   -mx / 50 +
-//   //   "deg)";
-//   cursor.style.transform = "translate(" + x + "px, " + y + "px )";
-
-//   window.requestAnimationFrame(loop);
-// }
 const cursor = document.querySelector("#cursor");
 const cursorCircle = cursor.querySelector(".cursor__circle");
 const mouse = { x: -100, y: -100 };
@@ -108,6 +54,16 @@ const cursorModifiers = document.querySelectorAll("[cursor-class]");
 const [...contant] = document.querySelectorAll(".box_con");
 const innerWrap = document.querySelector(".inner_wrap");
 
+const stars = document.querySelectorAll(".pumping");
+stars.forEach((obj) => {
+  obj.addEventListener("mouseenter", () => {
+    cursor.classList.add("arrow");
+  });
+  obj.addEventListener("mouseleave", () => {
+    cursor.classList.remove("arrow");
+  });
+});
+
 cursorModifiers.forEach((curosrModifier) => {
   curosrModifier.addEventListener("mouseenter", function () {
     cursor.classList.add("arrow");
@@ -129,4 +85,12 @@ cursorModifiers.forEach((curosrModifier) => {
     showContant.style.display = "flex";
     innerWrap.style.display = "flex";
   });
+});
+
+// bee
+const beeIcon = document.querySelector(".bee_icon");
+const bee = document.querySelector(".bee");
+
+beeIcon.addEventListener("click", () => {
+  bee.classList.toggle("active");
 });

@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Raleway:ital,wght@1,300&family=Righteous&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
 }
 body {
   width: 100vw;
@@ -17,6 +21,9 @@ body {
   );
   cursor: none;
   font-family: "Raleway", sans-serif;
+}
+.kr {
+  font-family: "Noto Sans KR", sans-serif;
 }
 #cursor {
   position: fixed;
@@ -131,6 +138,8 @@ body {
 }
 .inner_wrap .box_con p {
   font-size: 18px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 @media all and (max-width: 720px) {
@@ -157,4 +166,165 @@ body {
   .icon_wrap img {
     width: 60px;
   }
+}
+
+/* --------- title ---------- */
+h1 {
+  font-family: "Righteous", cursive;
+  position: absolute;
+  top: 7vh;
+  left: 0;
+  z-index: 9;
+  font-size: 8vh;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(
+    -45deg,
+    #88c5ff 25%,
+    #ff76c2 25%,
+    #ff76c2 50%,
+    #88c5ff 50%,
+    #88c5ff 75%,
+    #ff76c2 75%,
+    #ff76c2
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 20px 20px;
+  background-position: 0 0;
+  animation: stripes 1s linear infinite;
+}
+
+@keyframes stripes {
+  100% {
+    background-position: 20px 0, 20px 0, 20px 0;
+  }
+}
+
+h2 {
+  font-family: "Righteous", cursive;
+  position: absolute;
+  top: 7vh;
+  left: -6px;
+  text-shadow: 1px 1px 1px #3a8ad4;
+  z-index: 11;
+  font-size: 8vh;
+  width: 100%;
+  text-align: center;
+  color: #88c5ff;
+}
+
+/* ------------------ contant ------------------ */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #dcdcdc;
+  margin-bottom: 10px;
+  float: left;
+}
+.box_con:nth-child(1) p {
+}
+.box_con:nth-child(1) span {
+  font-weight: 800;
+}
+.box_con:nth-child(1) span.kr {
+  font-weight: 100;
+}
+.box_con:nth-child(3) .img_box {
+  height: auto;
+}
+.box_con:nth-child(3) .img_box img {
+  width: 100%;
+}
+
+/* -------------- heart animation ---------------- */
+.pumping {
+  position: relative;
+  height: 80px;
+  margin-bottom: 60px;
+}
+
+.pumping img {
+  content: attr(data-text);
+  position: absolute;
+  user-select: none;
+  transition: transform 100ms ease-in;
+}
+
+.pumping:active img {
+  transform: scale(0.9);
+}
+
+.shape {
+  --size: 8px;
+  position: absolute;
+  top: calc(50% - var(--size));
+  left: calc(50% - var(--size));
+  width: calc(var(--size) * 2);
+  height: calc(var(--size) * 2);
+  animation: popup var(--d) cubic-bezier(0.2, 0.01, 0.1, 0.1) forwards;
+}
+
+.square {
+  border-radius: 4px;
+  background-color: var(--c);
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: var(--c);
+}
+a .triangle {
+  width: 0px;
+  height: 0px;
+  background-color: none;
+  border-top: var(--size) solid transparent;
+  border-bottom: calc(var(--size) * 2) solid var(--c);
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+}
+
+.heart {
+  --size: 6px;
+  background-color: var(--c);
+}
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c);
+  border-radius: 50%;
+}
+.heart::before {
+  left: -50%;
+}
+.heart::after {
+  top: -50%;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) rotate(var(--r));
+  }
+}
+
+/* ---------------- bee ------------------ */
+.bee {
+  z-index: 999;
+  position: absolute;
+  top: 3vh;
+  right: 16vw;
+  display: none;
+}
+.bee.active {
+  display: block;
 }
